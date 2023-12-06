@@ -14,4 +14,23 @@ In this project, the data was gathered mosltly form the Government of Canada], e
 
 #### Data Available:
 `data/source` Here you will find all the raw data available for climate, forest and fires. Some provide external storage links as the source files were very large<br>
-`data/aligned_QGIS_data` Here you will find the aligned, cropped and resample geotiff files for an Ontario box, with same CRS and 250mx250m granularity
+`data/aligned_geotiff_QGIS` Here you will find the aligned, cropped and resample geotiff files for an Ontario box, with same CRS and 250mx250m granularity<br>
+`data/processed` Here you will find the processed dataframes for all three categories, a climate, fire and Ontario fores data file<br>
+`data/finaldataframes` Here you will find the final dataframes for each year_month used for viz and ml<br>
+`img` Here you will find various folders with vizualization snap shot at each month_year for various metrics<br>
+
+### Overview of Notebooks
+#### Forest Notebooks
+`Forest Data 1 Geotiff to CSV.ipynb` Notebook that takes in geotiff files and uses [rasterio](https://rasterio.readthedocs.io/en/stable/api/rasterio.io.html) module to output the data in csv format<br>
+`Forest Data 2 Create DataFrames.ipynb` Notebook that takes in the raw .csv files from raste rand compiles them into usefull DataFrames<br>
+`Forest Data 3 Merge with Fores and Approximate Age_Vol.ipyng` Also acts as as merging notebook, primarly focuses on the apporximation of age and volume for each year_month
+#### Fire Notebooks
+
+
+#### Climate Notebooks
+
+#### Vizualization
+
+#### Merging Notebooks
+
+
