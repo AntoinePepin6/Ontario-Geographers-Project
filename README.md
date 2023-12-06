@@ -6,6 +6,12 @@ In 2023, Canad reported an increased in forest ha's burned from an average of 2.
 
 In this project, the data was gathered mosltly form the Government of Canada], either directly from their servers or from associated branches such as the [National Forestry Database]() and [National Forestry Inforamtion System]. Most data can be dowlnoaded or requested through servers simply as .csv format and filtered baesd on the need. On the other hand, the forestry data is mostly generated from LandSat, i.e files are in geotiff format and requires a slighty difference approach to gathering and using the data. Here is a brief overview of the code found in this repository, as well as available data and restults.
 
+The goal of the project is to take in all the data, merge them based on the spatial geometry of the alighned geotif, approximate the metrics from 2001 to 2021 (range of our relevant data) and output dataframes that look like this, which can be used for modelling, and visuliaztion:
+
+![FinishDf2](https://github.com/AntoinePepin6/Ontario-Geographers-Project/assets/113490341/1baddfbf-2453-4d0f-acf3-f9eed26260ea)
+
+Each row has a vol, age approximation, a 1 if a fire occure, a 1 if a harvest occured and some climate data from the station nearest to that pixel.
+
 ### Overview of Data
 #### Data Sources:
 `Historical Climate Data` - from [url](https://climate.weather.gc.ca/historical_data/search_historic_data_e.html) or [server](https://dd.weather.gc.ca/climate/) <br>
@@ -23,14 +29,17 @@ In this project, the data was gathered mosltly form the Government of Canada], e
 #### Forest Notebooks
 `Forest Data 1 Geotiff to CSV.ipynb` Notebook that takes in geotiff files and uses [rasterio](https://rasterio.readthedocs.io/en/stable/api/rasterio.io.html) module to output the data in csv format<br>
 `Forest Data 2 Create DataFrames.ipynb` Notebook that takes in the raw .csv files from raste rand compiles them into usefull DataFrames<br>
-`Forest Data 3 Merge with Forest and Approximate Age_Vol.ipyng` Also acts as as merging notebook, primarly focuses on the apporximation of age and volume for each year_month
+`Forest Data 3 Merge with Forest and Approximate Age_Vol.ipyng` Also acts as as merging notebook, primarly focuses on the apporximation of age and volume for each year_month<br>
+`Forest Data 4 Mergin Approximations.ipynb` Notrebook that takes in all the approximation and inforamtion and generates a single DataFrame for each year_month<br>
 #### Fire Notebooks
-
-
+`Fire + Forests_Merged_Final.ipynb` Notebook that takes in fire point data and merges the coordinate grid from Forest Data 2 to it. Then the point fire information is merged back in Forest Data 3<br>
 #### Climate Notebooks
-
+`Climate Data 1 Download CSV.ipynb` Notebook that scraps json code from the [climate data server](https://dd.weather.gc.ca/climate/) and dowloads based on filtered years and location<br>
+`Climate Data 2 Concat and Clean.ipynb` Notebook that cleans and concats all the climate files into one DataFrame to merge on in Nearest Station<br>
+`Climate Data 3 Visuals.ipynb` Notebook that creates visuals for climate data<br>
 #### Vizualization
-
+`Visulization.ipynb` Notebook that creates .png snapshots for different metrics for each year_month based on the final dataframes from `Merging Approximations.ipynb`<br>
+`Video Viz` Notebook that uses [imageio](https://imageio.readthedocs.io/en/stable/) module to generate videos from many .png frames
 #### Merging Notebooks
 
-
+#### Machine Learning
