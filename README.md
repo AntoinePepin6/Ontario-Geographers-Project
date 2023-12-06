@@ -23,7 +23,7 @@ In this project, the data was gathered mosltly form the Government of Canada], e
 #### Forest Notebooks
 `Forest Data 1 Geotiff to CSV.ipynb` Notebook that takes in geotiff files and uses [rasterio](https://rasterio.readthedocs.io/en/stable/api/rasterio.io.html) module to output the data in csv format<br>
 `Forest Data 2 Create DataFrames.ipynb` Notebook that takes in the raw .csv files from raste rand compiles them into usefull DataFrames<br>
-`Forest Data 3 Merge with Fores and Approximate Age_Vol.ipyng` Also acts as as merging notebook, primarly focuses on the apporximation of age and volume for each year_month
+`Forest Data 3 Merge with Forest and Approximate Age_Vol.ipyng` Also acts as as merging notebook, primarly focuses on the apporximation of age and volume for each year_month
 #### Fire Notebooks
 
 
