@@ -1,2 +1,3 @@
 # Ontario-Geographers-Project
-Analyzing and Predicting Forest Fires in Ontario since 2023
+In 2023, Canad reported an increased in forest ha's burned from an average of 2.5 million to 16.5 million ha, counting up to 6100 forest firest. Considering the devasting effect it had on the nation, but economically and socially, something needs to be done to understand how and potentially predict when forest fires may occur. This involves thinking outside of the typical human factors,random acts of nature and climate data. Albeight some of these are usefull (especially climate data), we can consider effects from things like forestry trendsm such as age of forests, tree stand volume and harvesting years. The scope of the project is three fold: 
+(1) 
