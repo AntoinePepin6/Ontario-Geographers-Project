@@ -44,6 +44,8 @@ Each row has a vol, age approximation, a 1 if a fire occure, a 1 if a harvest oc
 - `Nearest Station Merging` Notebook that merges the climate data onto the final data frames created in Forest Data 4 based on nearest station coordinates<br>
 #### Machine Learning
 - `Machin Learning 1 Random Forest Model` Notebook that generates a randomforestclassifier based on some training data from our Forest Data 4 dataframes<br>
+### Link to Medium Article
+
 ### Pipelines/Flows
 #### Workflow Pipeline
 ![Workflow Pipeline](https://github.com/AntoinePepin6/Ontario-Geographers-Project/assets/113490341/6e342bb5-13a8-4431-b81c-b0abcfd63a5a)
