@@ -14,32 +14,42 @@ Each row has a vol, age approximation, a 1 if a fire occure, a 1 if a harvest oc
 
 ### Overview of Data
 #### Data Sources:
-`Historical Climate Data` - from [url](https://climate.weather.gc.ca/historical_data/search_historic_data_e.html) or [server](https://dd.weather.gc.ca/climate/) <br>
-`Canada Forest Fire Data` - from [CWFIS Datamart](https://cwfis.cfs.nrcan.gc.ca/datamart) <br>
-`Canada Forestry Trends` - from [NFIS](https://opendata.nfis.org/mapserver/nfis-change_eng.html) for most recent (2015-2019), from [Gov. Canada](https://open.canada.ca/data/en/dataset/ec9e2659-1c29-4ddb-87a2-6aced147a990) for 2001 & 2011 <br>
+1) `Historical Climate Data` - from [url](https://climate.weather.gc.ca/historical_data/search_historic_data_e.html) or [server](https://dd.weather.gc.ca/climate/) <br>
+2) `Canada Forest Fire Data` - from [CWFIS Datamart](https://cwfis.cfs.nrcan.gc.ca/datamart) <br>
+3) `Canada Forestry Trends` - from [NFIS](https://opendata.nfis.org/mapserver/nfis-change_eng.html) for most recent (2015-2019), from [Gov. Canada](https://open.canada.ca/data/en/dataset/ec9e2659-1c29-4ddb-87a2-6aced147a990) for 2001 & 2011 <br>
 
 #### Data Available:
-`data/source` Here you will find all the raw data available for climate, forest and fires. Some provide external storage links as the source files were very large<br>
-`data/aligned_geotiff_QGIS` Here you will find the aligned, cropped and resample geotiff files for an Ontario box, with same CRS and 250mx250m granularity<br>
-`data/processed` Here you will find the processed dataframes for all three categories, a climate, fire and Ontario fores data file<br>
-`data/finaldataframes` Here you will find the final dataframes for each year_month used for viz and ml<br>
-`img` Here you will find various folders with vizualization snap shot at each month_year for various metrics<br>
+- `data/source` Here you will find all the raw data available for climate, forest and fires. Some provide external storage links as the source files were very large<br>
+- `data/aligned_geotiff_QGIS` Here you will find the aligned, cropped and resample geotiff files for an Ontario box, with same CRS and 250mx250m granularity<br>
+- `data/processed` Here you will find the processed dataframes for all three categories, a climate, fire and Ontario fores data file<br>
+- `data/finaldataframes` Here you will find the final dataframes for each year_month used for viz and ml<br>
+- `img` Here you will find various folders with vizualization snap shot at each month_year for various metrics, as well as our `workflow pipeline` and our `notebook pipeline`<br>
 
 ### Overview of Notebooks
 #### Forest Notebooks
-`Forest Data 1 Geotiff to CSV.ipynb` Notebook that takes in geotiff files and uses [rasterio](https://rasterio.readthedocs.io/en/stable/api/rasterio.io.html) module to output the data in csv format<br>
-`Forest Data 2 Create DataFrames.ipynb` Notebook that takes in the raw .csv files from raste rand compiles them into usefull DataFrames<br>
-`Forest Data 3 Merge with Forest and Approximate Age_Vol.ipyng` Also acts as as merging notebook, primarly focuses on the apporximation of age and volume for each year_month<br>
-`Forest Data 4 Mergin Approximations.ipynb` Notrebook that takes in all the approximation and inforamtion and generates a single DataFrame for each year_month<br>
+- `Forest Data 1 Geotiff to CSV.ipynb` Notebook that takes in geotiff files and uses [rasterio](https://rasterio.readthedocs.io/en/stable/api/rasterio.io.html) module to output the data in csv format<br>
+- `Forest Data 2 Create DataFrames.ipynb` Notebook that takes in the raw .csv files from raste rand compiles them into usefull DataFrames<br>
+- `Forest Data 3 Merge with Forest and Approximate Age_Vol.ipyng` Also acts as as merging notebook, primarly focuses on the apporximation of age and volume for each year_month<br>
+- `Forest Data 4 Merging Approximations.ipynb` Notrebook that takes in all the approximation and inforamtion and generates a single DataFrame for each year_month<br>
 #### Fire Notebooks
-`Fire + Forests_Merged_Final.ipynb` Notebook that takes in fire point data and merges the coordinate grid from Forest Data 2 to it. Then the point fire information is merged back in Forest Data 3<br>
+- `Fire 1 Merge Forests to Fires.ipynb` Notebook that takes in fire point data and merges the coordinate grid from Forest Data 2 to it. Then the point fire information is merged back in Forest Data 3. The flow of this merge is presented below and available in the /img/ folder<br>
 #### Climate Notebooks
-`Climate Data 1 Download CSV.ipynb` Notebook that scraps json code from the [climate data server](https://dd.weather.gc.ca/climate/) and dowloads based on filtered years and location<br>
-`Climate Data 2 Concat and Clean.ipynb` Notebook that cleans and concats all the climate files into one DataFrame to merge on in Nearest Station<br>
-`Climate Data 3 Visuals.ipynb` Notebook that creates visuals for climate data<br>
+- `Climate Data 1 Download CSV.ipynb` Notebook that scraps json code from the [climate data server](https://dd.weather.gc.ca/climate/) and dowloads based on filtered years and location<br>
+- `Climate Data 2 Concat and Clean.ipynb` Notebook that cleans and concats all the climate files into one DataFrame to merge on in Nearest Station<br>
+- `Climate Data 3 Visuals.ipynb` Notebook that creates visuals for climate data<br>
 #### Vizualization
-`Visulization.ipynb` Notebook that creates .png snapshots for different metrics for each year_month based on the final dataframes from `Merging Approximations.ipynb`<br>
-`Video Viz` Notebook that uses [imageio](https://imageio.readthedocs.io/en/stable/) module to generate videos from many .png frames
+- `Visulization.ipynb` Notebook that creates .png snapshots for different metrics for each year_month based on the final dataframes from `Merging Approximations.ipynb`<br>
+- `Video Viz` Notebook that uses [imageio](https://imageio.readthedocs.io/en/stable/) module to generate videos from many .png frames<br>
 #### Merging Notebooks
-
+- `Nearest Station Merging` Notebook that merges the climate data onto the final data frames created in Forest Data 4 based on nearest station coordinates<br>
 #### Machine Learning
+- `Machin Learning 1 Random Forest Model` Notebook that generates a randomforestclassifier based on some training data from our Forest Data 4 dataframes<br>
+### Pipelines/Flows
+#### Workflow Pipeline
+![Workflow Pipeline](https://github.com/AntoinePepin6/Ontario-Geographers-Project/assets/113490341/6e342bb5-13a8-4431-b81c-b0abcfd63a5a)
+
+#### Notebook Pipeline
+![NOtebook Pipeline](https://github.com/AntoinePepin6/Ontario-Geographers-Project/assets/113490341/8d79003c-3e52-412f-8523-ce03b6ac4611)
+
+#### Forest + Fire Merging Flow
+![MergingFlow](https://github.com/AntoinePepin6/Ontario-Geographers-Project/assets/113490341/11e1be8e-0d77-413d-9362-0ed058e55a1d)
