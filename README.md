@@ -13,5 +13,5 @@ In this project, the data was gathered mosltly form the Government of Canada], e
 `Canada Forestry Trends` - from [NFIS](https://opendata.nfis.org/mapserver/nfis-change_eng.html) for most recent (2015-2019), from [Gov. Canada](https://open.canada.ca/data/en/dataset/ec9e2659-1c29-4ddb-87a2-6aced147a990) for 2001 & 2011 <br>
 
 #### Data Available:
-`data/src` Here you will find all the raw data available for climate, forest and fires. Some provide external storage links as the source files were very large<br>
-`data/processed` Here you will find the aligned, cropped and resample geotiff files for an Ontario box, with same CRS and 250mx250m granularity
+`data/source` Here you will find all the raw data available for climate, forest and fires. Some provide external storage links as the source files were very large<br>
+`data/aligned_QGIS_data` Here you will find the aligned, cropped and resample geotiff files for an Ontario box, with same CRS and 250mx250m granularity
