@@ -43,7 +43,8 @@ Each row has a vol, age approximation, a 1 if a fire occur, a 1 if a harvest occ
 #### Merging Notebooks
 - `Nearest Station Merging` Notebook that merges the climate data onto the final data frames created in Forest Data 4 based on nearest station coordinates<br>
 #### Machine Learning
-- `Machine Learning 1 Classifier Data Leakage` Notebook that generates a randomforestclassifier based on some training data from our Forest Data 4 dataframes. There is a problem with how this model is set up, and data leakage cause unreliable results. This is explained further in the Notebook.<br>
+- `Machine Learning 1 Classifier Data Leakage` Notebook that generates a randomforestclassifier based on some training data from our Forest Data 4 dataframes. There is a problem with how this model is set up, and data leakage cause unreliable results. This is explained further in the Notebook.
+- `Machine Learning 2 Random Forest Model` Notebook that generates a randomforestclassifier based on the Forest Data 4 dataframes, taking into account the data leakage that is discussed in `Machine Learning 1`. This code does not generate a useful model.<br>
 ### Link to Medium Article
 
 
