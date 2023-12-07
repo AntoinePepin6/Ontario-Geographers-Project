@@ -46,12 +46,14 @@ Each row has a vol, age approximation, a 1 if a fire occur, a 1 if a harvest occ
 - `Machine Learning 1 Classifier Data Leakage` Notebook that generates a randomforestclassifier based on some training data from our Forest Data 4 dataframes. There is a problem with how this model is set up, and data leakage cause unreliable results. This is explained further in the Notebook.<br>
 ### Link to Medium Article
 
+
 ### Pipelines/Flows
+#### Simplified Pipelin
+![Dummy Workflow Pipeline](https://github.com/AntoinePepin6/Ontario-Geographers-Project/assets/113490341/7f96ee52-a9eb-4ef2-a4cb-1d6317d1e58f)
+
 #### Workflow Pipeline
 ![Workflow Pipeline](https://github.com/AntoinePepin6/Ontario-Geographers-Project/assets/113490341/6e342bb5-13a8-4431-b81c-b0abcfd63a5a)
 
 #### Notebook Pipeline
 ![NOtebook Pipeline](https://github.com/AntoinePepin6/Ontario-Geographers-Project/assets/113490341/8d79003c-3e52-412f-8523-ce03b6ac4611)
 
-#### Forest + Fire Merging Flow
-![MergingFlow](https://github.com/AntoinePepin6/Ontario-Geographers-Project/assets/113490341/11e1be8e-0d77-413d-9362-0ed058e55a1d)
