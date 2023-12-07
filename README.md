@@ -23,7 +23,7 @@ Each row has a vol, age approximation, a 1 if a fire occur, a 1 if a harvest occ
 - `data/aligned_geotiff_QGIS` Here you will find the aligned, cropped and resampled geotiff files for an Ontario box, with same CRS and 250mx250m granularity<br>
 - `data/processed` Here you will find the processed dataframes for all three categories, climate, fire, and Ontario forest data file<br>
 - `data/finaldataframes` Here you will find the final dataframes for each year_month used for viz and ml<br>
-- `img` Here you will find various folders with vizualization snap shot at each month_year for various metrics, as well as our `workflow pipeline` and our `notebook pipeline`<br>
+- `img` Here you will find various folders with vizualization snap shot at each month_year for various metrics, as well as our `workflow pipeline` , our `notebook pipeline` and a pdf of the presentation of the project <br>
 
 ### Overview of Notebooks
 #### Forest Notebooks
