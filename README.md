@@ -46,7 +46,7 @@ Each row has a vol, age approximation, a 1 if a fire occur, a 1 if a harvest occ
 - `Machine Learning 1 Classifier Data Leakage` Notebook that generates a randomforestclassifier based on some training data from our Forest Data 4 dataframes. There is a problem with how this model is set up, and data leakage cause unreliable results. This is explained further in the Notebook.
 - `Machine Learning 2 Random Forest Model` Notebook that generates a randomforestclassifier based on the Forest Data 4 dataframes, taking into account the data leakage that is discussed in `Machine Learning 1`. This code does not generate a useful model.<br>
 ### Link to Medium Article
-
+https://medium.com/@antoine.pepin/a-framework-for-visualizing-and-understanding-forest-fires-in-ontario-4b1aeb90e006
 
 ### Pipelines/Flows
 #### Simplified Pipelin
