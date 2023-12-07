@@ -6,7 +6,7 @@ In 2023, Canada reported an increase in forest hectares burned from an average o
 
 In this project, the data was gathered mostly form the Government of Canada, either directly from their servers or from associated branches such as the [National Forestry Database]() and [National Forestry Inforamtion System]. Most data can be downloaded or requested through servers simply as .csv format and filtered based on the need. On the other hand, the forestry data is mostly generated from LandSat, i.e files are in geotiff format and requires a slighty different approach to gathering and using the data. Here is a brief overview of the code found in this repository, as well as available data and restults.
 
-The goal of the project is to take in all the data, merge them based on the spatial geometry of the aligned geotif, approximate the metrics from 2001 to 2021 (range of our relevant data) and output dataframes that look like this, which can be used for modelling, and visuliaztion:
+The goal of the project is to take in all the data, merge them based on the spatial geometry of the aligned geotif, approximate the metrics from 2001 to 2021 (range of our relevant data) and output dataframes that look like this, which can be used for modelling, and visualization:
 
 ![FinishDf2](https://github.com/AntoinePepin6/Ontario-Geographers-Project/assets/113490341/1baddfbf-2453-4d0f-acf3-f9eed26260ea)
 
